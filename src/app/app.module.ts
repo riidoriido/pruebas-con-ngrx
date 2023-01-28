@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CounterComponent } from './components/counter/counter.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { appReducer } from './store/app.reducer';
 
 @NgModule({
   declarations: [AppComponent, CounterComponent, ButtonsComponent],
@@ -17,12 +18,11 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(appReducer, {}),
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
   ],
-  exports: [MatIconModule, MatIconModule, MatToolbarModule],
   providers: [],
   bootstrap: [AppComponent],
 })
