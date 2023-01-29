@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,9 +11,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { CounterComponent } from './components/counter/counter.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { appReducer } from './store/app.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { BooleanComponent } from './components/boolean/boolean.component';
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent, ButtonsComponent],
+  declarations: [AppComponent, CounterComponent, ButtonsComponent, BooleanComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +24,7 @@ import { appReducer } from './store/app.reducer';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent],

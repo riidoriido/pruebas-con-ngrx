@@ -1,0 +1,22 @@
+<ng-container>
+  <div class="flex justify-content-center">
+    <div>
+      <h2>Boolean switch</h2>
+      <hr />
+      <div class="value-container">
+        <p *ngIf="">
+          <mat-icon color="warn">close</mat-icon>
+        </p>
+        <p *ngIf="property">
+          <mat-icon color="accent">done</mat-icon>
+        </p>
+      </div>
+      <div class="buttons">
+        <button (click)="setBool()" mat-raised-button color="accent">
+          <mat-icon>refresh</mat-icon>Change
+        </button>
+      </div>
+      <hr />
+    </div>
+  </div>
+</ng-container>

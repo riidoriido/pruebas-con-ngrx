@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducer';
-import { decrease, increment } from 'src/app/store/counter/counter.actions';
+import {
+  decrease,
+  increment,
+  reset,
+} from 'src/app/store/counter/counter.actions';
 
 @Component({
   selector: 'app-buttons',
@@ -16,5 +20,9 @@ export class ButtonsComponent {
   }
   decrease() {
     this.store.dispatch(decrease());
+  }
+
+  reset() {
+    this.store.dispatch(reset());
   }
 }

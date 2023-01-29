@@ -1,0 +1,26 @@
+div,
+h2,
+hr {
+  color: white;
+}
+
+div {
+  justify-content: center;
+  padding: 2rem;
+}
+
+div.value-container {
+  justify-content: center;
+  padding-left: 2rem;
+  min-height: 28px;
+  max-height: 28px;
+}
+
+p {
+  font: icon;
+  padding-left: 3rem;
+}
+div.buttons {
+  padding-left: 2rem;
+  max-height: 32px;
+}
